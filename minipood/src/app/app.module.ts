@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MeeskondComponent } from './meeskond/meeskond.component';
 import { PoedComponent } from './poed/poed.component';
 import { TootedComponent } from './tooted/tooted.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeeskondComponent,
     PoedComponent,
-    TootedComponent
+    TootedComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
