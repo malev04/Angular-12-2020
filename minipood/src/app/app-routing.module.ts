@@ -5,8 +5,6 @@ import { PoedComponent } from './poed/poed.component';
 import { TootedComponent } from './tooted/tooted.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-src\app\tooted\tooted.component.html
-
 const routes: Routes = [
   { path: "", redirectTo: "tooted", pathMatch: 'full'},
   { path: "tooted", component: "TootedComponent" },
@@ -15,14 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)],
-  declarations: [
-      MeeskondComponent,
-      PoedComponent,
-      TootedComponent,
-      PageNotFoundComponent
-    ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
