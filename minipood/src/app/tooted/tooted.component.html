@@ -1,1 +1,6 @@
-<p>tooted works!</p>
+<div class="main-text" *ngFor="let product of products">
+ <b>{{ product.name }}</b> ( {{ product.color }} )
+ <br>
+ {{ product.price }} €
+ </div>
+ 
