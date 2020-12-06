@@ -11,7 +11,7 @@ export class PoedComponent implements OnInit {
   { location: "Toompuiestee 8C", time: "9-17", hinnaklass: "keskmine"},
   { location: "Liivalaia 16D", time: "9-17", hinnaklass: "kõrge"}	
 ];
-  shop: { location: string; time: string; };	
+  shop: { location: string; time: string; hinnaklass: string};	
 
   constructor() { }
 
@@ -19,7 +19,7 @@ export class PoedComponent implements OnInit {
 	this.shop = this.getFirstShop();
   }
 
-  getFirstShop(): {location: string, time: string} {
+  getFirstShop(): {location: string, time: string, hinnaklass: string} {
 	return this.shops[0];  
   }	
 }
