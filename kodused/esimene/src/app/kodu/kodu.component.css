@@ -1,0 +1,10 @@
+.klass {
+  padding-left: 80px;
+  color: blue;
+  background-color: yellow;
+}
+
+.klass:hower {
+  padding-bottom: 20px;
+  margin-top: 200px;
+}
