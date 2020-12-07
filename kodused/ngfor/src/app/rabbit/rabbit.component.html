@@ -1,0 +1,8 @@
+<div *ngFor="let rabbit of rabbits">
+	<div> {{ rabbit.breed.name}} </div>
+	<div> {{ rabbit.breed.origin}} </div>
+	<div *ngFor="let child of rabbit.children">
+		<div>Laps: {{ child }} </div>
+	 </div>
+	 <br>
+</div>
