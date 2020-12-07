@@ -1,1 +1,1 @@
-"Men navbar-ga ja muu selline" 
+"Menüü navbar-ga/routing jne" 
