@@ -6,6 +6,7 @@ import { ItemService } from '../item.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  items: { imgSrc: string; title: string; price: string; category: string; }[];
 
   constructor(private ItemService: ItemService) { }
 
