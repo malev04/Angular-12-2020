@@ -1,3 +1,4 @@
+import { CatService } from './cat.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,16 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cat.component.css']
 })
 export class CatComponent implements OnInit {
-  cats = [
-	"Miisu",
-	"Kiisu",
-	"Liisu",
-	"Kiti",
-	"Nurr"
-  ]
-  constructor() { }
+  cats;
+
+  constructor(private CatService: CatService) { }
 
   ngOnInit(): void {
+    this.cats = this.CatService.cats;
   }
 
 }
