@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "ngfor"
+  "defaultProject": "ngfor",
+  "cli": {
+    "analytics": false
+  }
 }
