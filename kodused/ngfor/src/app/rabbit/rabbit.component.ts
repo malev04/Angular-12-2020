@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rabbit.component.css']
 })
 export class RabbitComponent implements OnInit {
-  rabbits;
+    rabbits: any;
 
   constructor(private RabbitService: RabbitService) { }
 
