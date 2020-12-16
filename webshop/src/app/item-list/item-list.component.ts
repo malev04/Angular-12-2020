@@ -7,6 +7,7 @@ import { ItemService} from '../item/item.service';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
+  products: any;
   
   constructor(private itemService: ItemService) { }
 
