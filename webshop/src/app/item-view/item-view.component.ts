@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ItemService } from '../item/item.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { ItemService } from '../item/item.service';
 export class ItemViewComponent implements OnInit {
   products: any;
   product: any;
+  id: any;
 
-  constructor(private itemService:ItemService ) { }
+  constructor(private itemService:ItemService, private route: ActivatedRoute) { }
+
 
   ngOnInit(): void {
     this.products = this.itemService.products;
-    this.product = this.products[10];
+    this.id = this.route.snapshot.paramMap.get("itemId");
+    this.product = this.products[this.id];
   }
 
 }
