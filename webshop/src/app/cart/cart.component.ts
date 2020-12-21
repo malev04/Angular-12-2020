@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  cartItems: any;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartItems = this.cartService.productsInService;
+    console.log(this.cartItems);
   }
 
 }
