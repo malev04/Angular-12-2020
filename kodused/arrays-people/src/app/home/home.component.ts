@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  humans: [{ firstName: string; lastName: string; age: number; address: string; }];
-  human: [{ firstName: string; lastName: string; age: number; address: string; }];
+  humans: { firstName: string; lastName: string; age: number; address: string; }[];
+  human: { firstName: string; lastName: string; age: number; address: string; }[];
   // { firstName: string; lastName: string; age: number; address: string; }
   constructor(private arrayService: ArrayService) { }
 
   ngOnInit(): void {
-    this.human = this.arrayService.getAll;
+    this.human = this.arrayService.getAll();
   }
 
   onRemoveAll() {
