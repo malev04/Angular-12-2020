@@ -5,27 +5,29 @@ import { Injectable } from '@angular/core';
 })
 export class ArrayService {
   people = [
-    {firstName: "Anna", lastName: "Annik", age: 21, address: "Esonia" },
+    {firstName: "Anna", lastName: "Annik", age: 21, address: "Estonia" },
     {firstName: "Birgit", lastName: "Beez", age: 19, address: "Latvia" },
     {firstName: "Gerhard", lastName: "Berger", age: 24, address: "Austria" },
-    {firstName: "Gustav", lastName: "Gross", age: 32, address: "Esonia" },
-    {firstName: "Joonas", lastName: "Jutt", age: 26, address: "Esonia" },
+    {firstName: "Gustav", lastName: "Gross", age: 32, address: "Estonia" },
+    {firstName: "Joonas", lastName: "Jutt", age: 26, address: "Estonia" },
+    {firstName: "Jaak", lastName: "Joamets", age: 38, address: "Estonia" },
   ]
 
   constructor() { }
+  
   removeAll() {
     this.people = [];
   }
 
-  removeOne(index) {
+  removeOne(index: number) {
     this.people.splice(index,1);
   }
 
-  addOne(human) {
+  addOne(human: { firstName: string; lastName: string; age: number; address: string; }) {
     this.people.push(human);
   }
 
-  getOne(index) {
+  getOne(index: string | number) {
     return this.people[index];
   }
 
