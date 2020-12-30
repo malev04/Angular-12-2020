@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ValitudService } from './valitud.service';
 
 @Component({
   selector: 'app-valitud',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./valitud.component.css']
 })
 export class ValitudComponent implements OnInit {
+  chosen;
 
-  constructor() { }
+  constructor(private valitudService: ValitudService) { }
 
   ngOnInit(): void {
+    this.chosen = 
+      JSON.parse(localStorage.getItem("people")) || [];
   }
 
 }

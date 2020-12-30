@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     console.log(this.humans);
   }
 
-  onChooce(inimene) {
+  onChooce(inimene: any) {
     this.valitudService.chosenPeople.push(inimene);
   }
 
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     this.arrayService.removeAll();
   }
 
-  onRemoveOne(i: any) {
+  onRemoveOne(i: number) {
     this.arrayService.removeOne(i)
   }
 
