@@ -12,10 +12,12 @@ export class HomeComponent implements OnInit {
   //human: { firstName: string; lastName: string; age: number; address: string; }[];
   humans = [];
   human;
-  valitudService: any;
+  //valitudService: any;
 
   // { firstName: string; lastName: string; age: number; address: string; }
-  constructor(private arrayService: ArrayService) { }
+  constructor(
+      private arrayService: ArrayService,
+      private valitudService: ValitudService) { }
 
   ngOnInit(): void {
     console.log(this.humans);
