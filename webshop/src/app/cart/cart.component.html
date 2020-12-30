@@ -1,2 +1,13 @@
-<p>cart works!</p>
-<!-- ngfor -->
+<div>Ostukorvis on {{ cartItems.length }} eset</div>
+<button (click)="onEmptyCart()">Tühjenda ostukorv</button>
+
+<div *ngFor="let item of cartItems; let i = index">
+  <div class="item-top">
+    <img src="{{ item.imgSrc }}">
+  </div>
+  <div class="text-title">{{ item.title }}</div>
+  <div class="text-price"> {{ item.price }} </div>
+  <button (click)="onDeleteItem(i)">Kustuta</button>
+</div>
+
+<div>Ostukorvi summa: {{ sumOfCart }} €</div>
