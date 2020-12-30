@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ItemService {
+	
   products = [  
     { title: "Tere või (1) 82%", category: "Piimatooted", price: 1.49, imgSrc: "https://ecoop.ee/media/cache/db/1f/95672-tere-voi-82-200g-01d1.png"},
     { title: "Tere või (2) 82%", category: "Piimatooted", price: 1.49, imgSrc: "https://ecoop.ee/media/cache/db/1f/95672-tere-voi-82-200g-01d1.png"},
