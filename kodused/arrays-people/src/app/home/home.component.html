@@ -1,6 +1,9 @@
 <button (click)="onRemoveAll()" >Tühjenda</button>
 
+{{ humans }}
+
 <div *ngFor="let human of humans; let i = index">
   {{ human.firstName }} {{ human.lastName }}
   <button (click)="onRemoveOne(i)" >X</button>
+  <button (click)="onChoose(human)">Lisa valitute hulka</button>
 </div>

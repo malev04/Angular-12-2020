@@ -1,4 +1,5 @@
-import { ArrayService } from './../array.service';
+import { ValitudService } from '../valitud/valitud.service';
+import { ArrayService } from '../array.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,13 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  humans: { firstName: string; lastName: string; age: number; address: string; }[];
-  human: { firstName: string; lastName: string; age: number; address: string; }[];
+  //humans: { firstName: string; lastName: string; age: number; address: string; }[];
+  //human: { firstName: string; lastName: string; age: number; address: string; }[];
+  humans = [];
+  human;
+  valitudService: any;
+
   // { firstName: string; lastName: string; age: number; address: string; }
   constructor(private arrayService: ArrayService) { }
 
   ngOnInit(): void {
-    this.human = this.arrayService.getAll();
+    console.log(this.humans);
+    this.humans = this.arrayService.getAll();
+    console.log(this.humans);
+  }
+
+  onChooce(inimene) {
+    this.valitudService.chosenPeople.push(inimene);
   }
 
   onRemoveAll() {
@@ -32,8 +43,10 @@ export class HomeComponent implements OnInit {
     this.human = this.arrayService.getOne(i);
   }
 
+  /*
   onGetAll() {
     this.human = this.arrayService.getAll();
   }
+  */
 
 }

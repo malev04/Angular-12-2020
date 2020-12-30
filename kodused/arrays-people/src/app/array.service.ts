@@ -31,7 +31,9 @@ export class ArrayService {
     return this.people[index];
   }
 
-  getAll() {
+  getAll(): any[] {
+    console.log(this.people);
+    console.log(this.people.slice());
     return this.people.slice();
   }
 
