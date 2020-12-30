@@ -11,6 +11,8 @@ export class ArrayService {
     {firstName: "Gustav", lastName: "Gross", age: 32, address: "Estonia" },
     {firstName: "Joonas", lastName: "Jutt", age: 26, address: "Estonia" },
     {firstName: "Jaak", lastName: "Joamets", age: 38, address: "Estonia" },
+    {firstName: "Günther", lastName: "Grass", age: 41, address: "Germany" },
+    {firstName: "Tiiu", lastName: "Poisipea", age: 22, address: "Estonia" },
   ]
 
   constructor() { }
@@ -19,15 +21,16 @@ export class ArrayService {
     this.people = [];
   }
 
-  removeOne(index: number) {
+  removeOne(index: number): void {
     this.people.splice(index,1);
   }
 
-  addOne(human: { firstName: string; lastName: string; age: number; address: string; }) {
+  addOne(human: any): void {
     this.people.push(human);
+    console.log(this.people);
   }
 
-  getOne(index: string | number) {
+  getOne(index: number): any {
     return this.people[index];
   }
 

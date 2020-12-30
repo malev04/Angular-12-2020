@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
 import { ValitudService } from './valitud.service';
 
 @Component({

@@ -24,15 +24,18 @@ export class HomeComponent implements OnInit {
   }
 
   onChooce(inimene: any) {
-    this.valitudService.chosenPeople.push(inimene);
+    this.valitudService.addHuman(inimene);
   }
 
   onRemoveAll() {
     this.arrayService.removeAll();
+    this.humans = this.arrayService.getAll();
   }
 
   onRemoveOne(i: number) {
-    this.arrayService.removeOne(i)
+    console.log(i);
+    this.arrayService.removeOne(i);
+    this.humans = this.arrayService.getAll();
   }
 
   onAdd(human: any) {
