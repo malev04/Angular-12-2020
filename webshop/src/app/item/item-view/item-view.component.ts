@@ -17,7 +17,8 @@ export class ItemViewComponent implements OnInit {
   ngOnInit(): void {
     // this.products = this.itemService.products;
     this.id = this.route.snapshot.paramMap.get("itemId");
-    this.product = this.itemService.products[this.id];
+    //this.product = this.itemService.products[this.id];
+    this.product = this.itemService.getProducts()[this.id];
   }
 
 }

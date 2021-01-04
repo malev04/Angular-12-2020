@@ -9,10 +9,13 @@ export class ArrayService {
     {firstName: "Birgit", lastName: "Beez", age: 19, address: "Latvia" },
     {firstName: "Gerhard", lastName: "Berger", age: 24, address: "Austria" },
     {firstName: "Gustav", lastName: "Gross", age: 32, address: "Estonia" },
+    {firstName: "Gustav", lastName: "Sookaera", age: 22, address: "Estonia" },
+    {firstName: "Friedrich", lastName: "Faust", age: 64, address: "Estonia" },
     {firstName: "Joonas", lastName: "Jutt", age: 26, address: "Estonia" },
     {firstName: "Jaak", lastName: "Joamets", age: 38, address: "Estonia" },
     {firstName: "Günther", lastName: "Grass", age: 41, address: "Germany" },
     {firstName: "Tiiu", lastName: "Poisipea", age: 22, address: "Estonia" },
+    {firstName: "Henn", lastName: "Vesihein", age: 22, address: "Estonia" },
   ]
 
   constructor() { }

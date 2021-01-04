@@ -8,13 +8,20 @@ import { ItemService } from '../item.service';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
-  products: any;
-
+  //products: number;
+  //products: { imgSrc: string; title: string; price: string; category: string; } [];
+  product: {   imgSrc: string, title: string, price: string, category: string };
+  id: any;
+  
   constructor(private itemService: ItemService, 
     private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.products = this.itemService.products;
+    //this.products = this.itemService.products;
+    //this.products = this.itemService.getOneProduct(this.id);
+    //this.itemService.products = [];
+    this.product = this.itemService.getOneProducts(this.id);
+    
   }
 
   onAddToCart(product: any) {

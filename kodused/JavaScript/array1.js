@@ -1,12 +1,13 @@
 console.log("JavaScript töötab (!)");
-
-console.log(document.getElementById("tekst"));
-
 document.getElementById("tekst").innerText = "See on nüüd uus tekst";
 
 var frontEnd = ["JavaScript", "PHP", "Java", "HTML", "CSS", "C#"];
+var backEnd = ["Ubuntu","Debian","Fedora","FreeBSD"];
 
-document.getElementById("tekst").innerText = frontEnd;
+document.getElementById("tekst2").innerText = frontEnd;
+console.log(document.getElementById("tekst"));
+console.log(document.getElementById("tekst2"));
+
 /*
 //This method removes the first item of an array.
 //frontEnd.shift();
@@ -26,8 +27,12 @@ frontEnd.splice(2,3);
 frontEnd.splice(2,5);
 //This method replaces from index 2 (starting from 0) with index 3 (starting from 0) items.
 frontEnd[1] = frontEnd [2];
-*/
+
 var uusMuutuja = frontEnd[0].split("a"); // making array from string from beginning of 1st string, splitting the string from figure A
 //var uusMuutuja = frontEnd[1].split("");    // making array from string, splitting the 2nd string (=võtame teise sõna algustähe)
 console.log(uusMuutuja); // = ülemiste harjutuste jaoks.
+*/
 document.getElementById("tekst").innerText = frontEnd;
+console.log(document.getElementById("tekst"));
+document.getElementById("tekst2").innerText = backEnd;
+console.log(document.getElementById("tekst2"));
