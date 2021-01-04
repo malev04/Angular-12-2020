@@ -10,7 +10,7 @@ import { ItemService } from '../item.service';
 export class ItemListComponent implements OnInit {
   //products: number;
   //products: { imgSrc: string; title: string; price: string; category: string; } [];
-  product: { imgSrc: string, title: string, price: string, category: string };
+  products: { imgSrc: string, title: string, price: string, category: string };
   id: any;
   
   constructor(private itemService: ItemService, 
@@ -20,7 +20,7 @@ export class ItemListComponent implements OnInit {
     //this.products = this.itemService.products;
     //this.products = this.itemService.getOneProduct(this.id);
     //this.itemService.products = [];
-    this.product = this.itemService.getOneProducts(this.id);
+    this.products = this.itemService.getOneProduct(this.id);
     
   }
 

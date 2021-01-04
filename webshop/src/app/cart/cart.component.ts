@@ -7,7 +7,11 @@ import { CartService } from './cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartItems: any;
+  cartItems: {
+    title: string,
+    category: string,
+    price: string,
+    imgSrc: string}[];
   sumOfCart: number;
 
   constructor(private cartService: CartService) { }
