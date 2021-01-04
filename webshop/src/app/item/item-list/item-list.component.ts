@@ -1,3 +1,4 @@
+import { Item } from '../item.model';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../cart/cart.service';
 import { ItemService } from '../item.service';
@@ -9,7 +10,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemListComponent implements OnInit {
   //products: number;
-  products: { imgSrc: string; title: string; price: string; category: string; } [];
+  products: Item[];
   //products: { imgSrc: string, title: string, price: string, category: string };
   
   constructor(private itemService: ItemService, 
