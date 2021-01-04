@@ -11,7 +11,7 @@ export class ItemService {
   
     constructor() { }
     
-    getProducts() {
+    getProducts(): {
       imgSrc: string;
       title: string;
       price: string;
@@ -20,7 +20,7 @@ export class ItemService {
       return this.products;
     }
 
-    getOneProduct(id: string) {
+    getOneProduct(id: string): {
       imgSrc: string;
       title: string;
       price: string;
@@ -30,7 +30,6 @@ export class ItemService {
       /*
       return this.products[id];
       this.products.find(product => {
-        product.title == "või";
-      */      
-  }     
+        product.title == "või";      
+  }    */       
 }

@@ -10,7 +10,7 @@ import { ItemService } from '../item.service';
 export class ItemListComponent implements OnInit {
   //products: number;
   //products: { imgSrc: string; title: string; price: string; category: string; } [];
-  product: {   imgSrc: string, title: string, price: string, category: string };
+  product: { imgSrc: string, title: string, price: string, category: string };
   id: any;
   
   constructor(private itemService: ItemService, 

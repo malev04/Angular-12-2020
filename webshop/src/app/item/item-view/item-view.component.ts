@@ -9,7 +9,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemViewComponent implements OnInit {
   // products: any;
-  product: any;
+  product: { imgSrc: string, title: string, price: string, category: string };
   id: any;
 
   constructor(private itemService: ItemService, private route: ActivatedRoute) { }
@@ -18,7 +18,7 @@ export class ItemViewComponent implements OnInit {
     // this.products = this.itemService.products;
     this.id = this.route.snapshot.paramMap.get("itemId");
     //this.product = this.itemService.products[this.id];
-    this.product = this.itemService.getProducts()[this.id];
+    this.product = this.itemService.getOneProduct(this.id);
   }
 
 }
