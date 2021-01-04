@@ -9,9 +9,8 @@ import { ItemService } from '../item.service';
 })
 export class ItemListComponent implements OnInit {
   //products: number;
-  //products: { imgSrc: string; title: string; price: string; category: string; } [];
-  products: { imgSrc: string, title: string, price: string, category: string };
-  id: any;
+  products: { imgSrc: string; title: string; price: string; category: string; } [];
+  //products: { imgSrc: string, title: string, price: string, category: string };
   
   constructor(private itemService: ItemService, 
     private cartService: CartService) { }
@@ -20,7 +19,7 @@ export class ItemListComponent implements OnInit {
     //this.products = this.itemService.products;
     //this.products = this.itemService.getOneProduct(this.id);
     //this.itemService.products = [];
-    this.products = this.itemService.getOneProduct(this.id);
+    this.products = this.itemService.getProducts();
     
   }
 
