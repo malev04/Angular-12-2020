@@ -1,5 +1,5 @@
+import { Item } from './../item/item.model';
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../item/item.model';
 import { CartService } from './cart.service';
 
 @Component({
@@ -16,30 +16,31 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     // this.cartItems = this.cartService.productsInService;
     this.cartItems = JSON.parse(localStorage.getItem("items"));
-    this.calculateSumOfCart();
+    this.sumOfCart = this.calculateSumOfCart();
   }
 
-  onDeleteItem(id: number) {
+  onDeleteItem(id: number): void {
     this.cartItems = JSON.parse(localStorage.getItem("items"));
     this.cartItems.splice(id, 1);
-    this.calculateSumOfCart();
+    this.sumOfCart = this.calculateSumOfCart();
     localStorage.setItem("items", 
         JSON.stringify(this.cartItems));
   }
 
-  onEmptyCart() {
+  onEmptyCart(): void {
     // this.cartService.productsInService = [];
     this.cartItems = [];
-    this.calculateSumOfCart();
+    this.sumOfCart = this.calculateSumOfCart();
     localStorage.setItem("items", 
       JSON.stringify(this.cartItems));
   }
 
-  calculateSumOfCart() {
-    this.sumOfCart = 0;
+  calculateSumOfCart(): number {
+    let sum = 0;
     this.cartItems.forEach((element: any) => {
-      this.sumOfCart = this.sumOfCart + (Number)(element.price);
+      sum = sum + (Number)(element.price);
     });
-    this.sumOfCart = (Number)(this.sumOfCart.toFixed(2));
+    sum = (Number)(sum.toFixed(2));
+    return sum;
   }
 }
