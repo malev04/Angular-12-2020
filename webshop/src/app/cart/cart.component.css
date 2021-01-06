@@ -19,6 +19,10 @@ margin: 0 10px;
     border-bottom: 1px solid lightgrey;
 }
 
+.item-image {
+   width: 150px; 
+   height: 150px;
+}
 .delete-button {
     margin-top: 50px;
     height: 50px;
