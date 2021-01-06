@@ -2,9 +2,7 @@
 <button (click)="onEmptyCart()">Tühjenda ostukorv</button>
 
 <div class="ostukorvi-ese" *ngFor="let item of cartItems; let i = index">
-  <div class="item-image">
-    <img src="{{ item.imgSrc }}">
-  </div>
+    <img class="item-image" src="{{ item.imgSrc }}"> 
   <div class="text-title">{{ item.title }}</div>
   <div class="text-price"> {{ item.price }} </div>  
   <img class="delete-button" src="assets\trash.svg" (click)="onDeleteItem(i)">
