@@ -7,6 +7,10 @@ import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 import { MouseComponent } from './mouse/mouse.component';
 import { RabbitComponent } from './rabbit/rabbit.component';
+import { CatViewComponent } from './cat/cat-view/cat-view.component';
+import { DogViewComponent } from './dog/dog-view/dog-view.component';
+import { MouseViewComponent } from './mouse/mouse-view/mouse-view.component';
+import { RabbitViewComponent } from './rabbit/rabbit-view/rabbit-view.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { RabbitComponent } from './rabbit/rabbit.component';
     CatComponent,
     DogComponent,
     MouseComponent,
-    RabbitComponent
+    RabbitComponent,
+    CatViewComponent,
+    DogViewComponent,
+    MouseViewComponent,
+    RabbitViewComponent
   ],
   imports: [
     BrowserModule,

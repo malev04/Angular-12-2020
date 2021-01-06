@@ -1,10 +1,12 @@
 console.log("JavaScript töötab (!)");
-document.getElementById("tekst").innerText = "See on nüüd uus tekst";
+document.getElementById("tekst").innerText = "See on nüüd esimene uus tekst";
+document.getElementById("tekst2").innerText = "See on nüüd teine uus tekst";
 
 var frontEnd = ["JavaScript", "PHP", "Java", "HTML", "CSS", "C#"];
 var backEnd = ["Ubuntu","Debian","Fedora","FreeBSD"];
 
-document.getElementById("tekst2").innerText = frontEnd;
+document.getElementById("tekst").innerText = frontEnd;
+document.getElementById("tekst2").innerText = backEnd;
 console.log(document.getElementById("tekst"));
 console.log(document.getElementById("tekst2"));
 
