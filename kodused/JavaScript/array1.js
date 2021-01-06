@@ -3,7 +3,7 @@ document.getElementById("tekst").innerText = "See on nüüd esimene uus tekst";
 document.getElementById("tekst2").innerText = "See on nüüd teine uus tekst";
 
 var frontEnd = ["JavaScript", "PHP", "Java", "HTML", "CSS", "C#"];
-var backEnd = ["Ubuntu","Debian","Fedora","FreeBSD"];
+var backEnd = ["Ubuntu","Debian","Fedora","FreeBSD","Win10x86", "Win10x64", "Win7SLUx86", "WinXP"];
 
 document.getElementById("tekst").innerText = frontEnd;
 document.getElementById("tekst2").innerText = backEnd;

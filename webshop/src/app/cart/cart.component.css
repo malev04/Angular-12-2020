@@ -1,0 +1,25 @@
+/*
+1. variant  - igaüks eraldi
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 0px;
+margin-bottom: 0px;
+
+2. variant - esimene number üles-all, teine number vasakule-paremale 
+margin: 0 10px;
+
+3. variant ...
+
+*/
+.ostukorvi-ese {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    margin: 0 10%;
+    border-bottom: 1px solid lightgrey;
+}
+
+.delete-button {
+    height: 50px;
+    width: 50px;
+}

@@ -3,7 +3,7 @@
 body {
     margin: 0;
 } 
-
+/* kastide kustutamiseks vajutamiseks */
 * {
   outline: none;  
 }
