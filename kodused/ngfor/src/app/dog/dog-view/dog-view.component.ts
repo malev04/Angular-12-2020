@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DogService } from '../dog.service';
 
 @Component({
   selector: 'app-dog-view',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dog-view.component.css']
 })
 export class DogViewComponent implements OnInit {
+  nimi;
+  vanus;
+  omanik;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(param => {
+      this.nimi = param.koeraNimi;
+      this.vanus = param.koeraVanus;
+      this.omanik = param.koeraOmanik;
+    })
   }
 
 }

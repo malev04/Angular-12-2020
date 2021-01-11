@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: "mouse", component: MouseComponent },
   { path: "rabbit", component: RabbitComponent },
   { path: "cat/view/:catId", component: CatViewComponent },
-  { path: "dog/view/:koeraNimi/:koeraVanur/:koeraOmanik", component: DogViewComponent },
+  { path: "dog/view/:koeraNimi/:koeraVanus/:koeraOmanik", component: DogViewComponent },
   { path: "mouse/vaata/:id", component: MouseViewComponent },
   { path: "rabbit/view/:rabbitId", component: RabbitViewComponent },
 

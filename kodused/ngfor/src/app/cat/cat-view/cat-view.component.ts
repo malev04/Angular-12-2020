@@ -15,8 +15,8 @@ export class CatViewComponent implements OnInit {
       private catService: CatService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(catparam => {
-      this.id = catparam.catId;
+    this.route.params.subscribe(param => {
+      this.id = param.catId;
     })
     this.cat = this.catService.cats[this.id]
   }
