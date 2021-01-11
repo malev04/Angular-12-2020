@@ -13,6 +13,7 @@ export class DogComponent implements OnInit {
 
   ngOnInit(): void {
     this.dogs = this.DogService.dogs;
+    //this.dog = this.DogService.dogs;
   }
 
 }

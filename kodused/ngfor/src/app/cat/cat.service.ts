@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class CatService {
   cats = [
     "Miisu",
+    "Kissa",
     "Kiisu",
     "Liisu",
     "Kiti",
