@@ -17,11 +17,10 @@ export class ItemListComponent implements OnInit {
     private cartService: CartService) { }
 
   ngOnInit(): void {
-    //this.products = this.itemService.products;
-    //this.products = this.itemService.getOneProduct(this.id);
-    //this.itemService.products = [];
-    this.products = this.itemService.getProducts();
-    
+    //this.products = this.itemService.getProducts();
+    this.itemService.fetchProductsFromDatabase().subscribe(response => {
+        this.products = response;
+      });    
   }
 
   onAddToCart(product: any) {
@@ -36,5 +35,9 @@ export class ItemListComponent implements OnInit {
 
   onMouseLeave(item: any) {
     item.showButton = false;
+  }
+
+  onAddToDatabase() {
+    this.itemService.saveProductsToDatabase();
   }
 }

@@ -15,7 +15,7 @@ export class DogViewComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(param => {
+      this.route.params.subscribe(param => {
       this.nimi = param.koeraNimi;
       this.vanus = param.koeraVanus;
       this.omanik = param.koeraOmanik;
