@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CatService } from '../cat.service';
 
 @Component({
   selector: 'app-cat-view',
@@ -10,9 +11,14 @@ export class CatViewComponent implements OnInit {
   id;
   cat;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+      private catService: CatService) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(catparam => {
+      this.id = catparam.catId;
+    })
+    this.cat = this.catService.cats[this.id]
   }
 
 }
