@@ -12,7 +12,7 @@ export class CatViewComponent implements OnInit {
   cat;
 
   constructor(private route: ActivatedRoute,
-      private catService: CatService) { }
+    private catService: CatService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {

@@ -1,4 +1,4 @@
 <div *ngFor="let dog of dogs; let i = index"
 [routerLink]="['view', dog.name, dog.age, dog.owner]">
-	Koer nimega {{ dog.name }} (vanus: {{ dog.age }}) omanikuks on {{ dog.owner}}.
+	Koer {{dog.id }} nimega {{ dog.name }} (vanus: {{ dog.age }}) omanikuks on {{ dog.owner}}.
 </div>
