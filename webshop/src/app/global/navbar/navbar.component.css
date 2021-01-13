@@ -1,37 +1,40 @@
 .navbar-top {
-    padding: 10px, 0;
-    background-color: #299bdb;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 55px;
-    z-index: 8889;
+	padding: 10px 0;
+	background-color: #299bdb;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 55px;
+	z-index: 8889;
 } 
 
 .navbar-top img {
-    height: 60px;
+    height: -5px;
+	margin-left: 20px;
+	height: 70px;
 }
 .navbar-bottom {
     display: flex;
     justify-content: space-around;
     background-color: #fff;
-    /* position: fixed; */
     width: 100%;
     z-index: 999;
     margin-top: 100px;
     height: 40px;
     transform: margin-right .15s;
-    box-shadow: 2px 7px 7px rgba(0, 0, 0,.04);
+	box-shadow: 2px 7px 7px rgba(0,0,0,.04);
 }
+
 .cart-button {
-    position: relative;
-    top: -13px;
-    border-color: transparent;
-    background-color: #ff8b49;
-    color: #fff;
-    border-radius: 20px;
-    width: 200px;
+  position: relative;
+  top: -13px;
+  border-color: transparent;
+  background-color: #ff8b49;
+  color: #fff;
+  border-radius: 40px;
+  width: 200px; 
+  cursor: pointer;
 }
 
 .cart-button img {
