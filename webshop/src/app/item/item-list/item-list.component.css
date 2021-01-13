@@ -17,6 +17,18 @@
   margin-bottom: 16px;
 }
 
+.filters {
+  display: flex;
+}
+
+.filter-values {
+  display: flex;
+}
+
+.filter-value {
+  padding: 0 10px;
+}
+
 /* 
 .item-list {
     margin: 0 10%;
