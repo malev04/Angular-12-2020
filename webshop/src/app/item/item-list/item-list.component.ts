@@ -23,6 +23,24 @@ export class ItemListComponent implements OnInit {
       });    
   }
 
+  onSortTitle() {
+    this.products = this.products.sort((thisItem, nextItem) => 
+      thisItem.title.localeCompare(nextItem.title)
+    );    
+  }
+
+  onSortPopularity() {
+  }
+
+  onSortPrice() {
+    this.products = this.products.sort((thisItem, nextItem) => 
+      (Number)(thisItem.price) - (Number)(nextItem.price)
+    );
+  }
+
+  onSortDiscount() {
+  }
+
   onAddToCart(product: any) {
     this.cartService.productsInService.push(product);
     localStorage.setItem("items", 
