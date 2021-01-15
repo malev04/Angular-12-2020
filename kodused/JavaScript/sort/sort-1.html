@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<title>sort1</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+p {
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: blue;
+}
+
+p.kast {
+	border: 1px dotted black;
+	padding: 50px 55px 55px 50px;
+	margin-top: 2%;
+	background-color: yellow;
+	font-family: sans-serif;
+	font-size: 16px;
+	color: blue;
+}
+
+body {
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 80px;  
+}
+</style>
+</head>
+<body>
+<p>Sorteeri numbrid kasvavasse järjekorda:</p>
+<button onclick="justsort()">Sorteeri</button>
+<p class="kast" id="jada"></p>
+<script>
+var numbers = [200, 301, 111, 302, 405, 609, 402, 209, 108, 502, 402, 91];
+document.getElementById("jada").innerHTML = numbers;
+function justsort() {
+	/*comparator function like [ (a, b) => a - b; ] is perfectly valid.*/
+	numbers.sort(function(a, b){return a-b});
+	document.getElementById("jada").innerHTML = numbers;
+	console.log("Massiiv:",numbers);
+}
+</script>
+</body>
+</html>

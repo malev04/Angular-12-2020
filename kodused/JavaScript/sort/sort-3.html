@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<title>sort3</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+p {
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: blue;
+}
+
+div.kast {
+	border: 1px dotted black;
+	padding: 50px 55px 55px 50px;
+	margin: 10px 10px 10px 10px;
+	background-color: yellow;	
+	font-family: sans-serif;
+	font-size: 16px;
+	color: blue;
+	word-wrap: break-word;
+}
+
+body {
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 80px;  
+}
+</style>
+</head>
+<body>
+<p>Sorteeri numbrid kasvavasse järjekorda:</p>
+<button onclick="justsort()">Sorteeri</button>
+<div class="kast" id="jada"></div>
+<script>
+
+function justsort() {
+  numbers.sort(function(a, b){return a-b});
+  document.getElementById("jada").innerHTML = numbers;
+  console.log("sorteeritud massiiv:",numbers);
+}
+for (var a=[],i=0;i<80;++i) a[i]=i;
+function randomize(array) {
+  var tmp, momentum, top = array.length;
+  if(top) while(--top) {
+    momentum = Math.floor(Math.random() * (top + 1));
+    tmp = array[momentum];
+    array[momentum] = array[top];
+    array[top] = tmp;
+  }
+  return array;
+}
+numbers = randomize(a);
+console.log("Massiiv:",numbers);
+document.getElementById("jada").innerHTML = numbers;
+</script>
+</body>
+</html>
