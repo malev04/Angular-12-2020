@@ -17,6 +17,11 @@
   margin-bottom: 16px;
 }
 
+.filter-bar:hover {
+  text-decoration: underline;
+  text-decoration: bold;
+}
+
 .filters {
   display: flex;
   padding-top: 25px;
