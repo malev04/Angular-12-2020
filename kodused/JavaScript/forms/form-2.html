@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="et" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Forms (with validation)</title>
+	<style>
+	input.ng-invalid {border:1px solid red;}
+	div { border: 1px solid black; background-color: lightblue; padding: 20px 20px 20px 20px; }
+	</style>
+</head>
+<body>
+<div ng-app="">
+<form name="frm">
+	<div>
+    Eesnimi: <input type="text" name="firstname" ng-model="user.firstname" required>
+	<span ng-show="frm.firstname.$dirty && frm.firstname.$error.required">Required!</span>
+	<span ng-show="frm.firstname.$dirty && frm.firstname.$invalid">Palun korrigeeri sisestatud andmeid!</span>
+	</div>  
+	<div>
+    Perenimi: <input type="text" name="surname" ng-model="user.surname" required>
+	<span ng-show="frm.surname.$dirty && frm.surname.$error.required">See väli on nõutud!</span>
+	<span ng-show="frm.surname.$dirty && frm.surname.$invalid">Palun korrigeeri sisestatud andmeid!</span>
+	</div>  
+	<div>
+	E-Mail: <input type="email" name="email" ng-model="user.email" required>
+	<span ng-show="frm.email.$dirty && frm.email.$error.required">See väli on nõutud!</span>
+	<span ng-show="frm.email.$dirty && frm.email.$error.email">See ei ole email, palun korrigeeri andmeid!</span>
+	</div>
+	<div>
+	Parool:
+	<input 
+		type="password"
+		name="password"
+		ng-model="user.password"
+		required
+		ng-minlength="5"
+		ng-maxlength="10"/>
+	<span ng-show="frm.password.$dirty && frm.password.$error.required">andmed on kohustuslikud*</span>
+	<span ng-show="frm.password.$dirty && frm.password.$error.minlength">sisestatud parool on lühike!</span>
+	<span ng-show="frm.password.$dirty && frm.password.$error.maxlength">sisestatud parool on pikk!</span>
+	</div>
+</form>
+<div>
+  <div>Sisestasid eesnime: {{user.firstname}}</div><br>
+  <div>Sisestasid perenime: {{user.surname}}</div><br>
+  <div>Sisestasid parooli: {{user.password}}</div><br>
+</div>
+<p>
+<span>ENG: Change the name and/or email inside the input field(s), 
+   and you will see the name and/or email in the header changes accordingly.</span>
+<span>EST: Muuda vastavaid andmeid ja/või e-posti aadressi tekstikastides
+   ja sa näed ülal vastavaid sisestatud väärtusi.</span>   
+</p>   
+<!-- 
+import / alternative(s): 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+<script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
+OK version = v1.4.0
+-->
+<script src="../angular.js"></script>
+</div>
+</body>
+</html>

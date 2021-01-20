@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<title>
+Date | 
+get formatted date!
+</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  text-align:center;
+}
+p.kast {
+  border: 1px dotted black;
+  padding: 50px 55px 55px 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px; 
+  background-color: yellow;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+}
+
+body {
+  text-align: center;	 
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;  
+}
+</style>  
+</head>
+<body>
+<h1 style="color:blue;">Date formatter function in JavaScript</h1> 
+<p id="INIT_DATE"></p> 
+<button onclick="config_Date()">Uus kuupäev</button> 
+<p class="kast" id="FRMT_DATE"></p> 
+<script> 
+var frmt_kuup = document.getElementById("FRMT_DATE"); 
+var today = new Date(); 
+var initdate = document.getElementById("INIT_DATE"); 
+initdate.innerHTML = today; 
+var dd = today.getDate(); 
+var mm = today.getMonth() + 1; 
+
+var yyyy = today.getFullYear(); 
+if (dd < 10) { 
+dd = '0' + dd; 
+} 
+if (mm < 10) { 
+mm = '0' + mm; 
+} 
+var today = yyyy + '-' + mm + '-' + dd; 
+
+function config_Date() { 
+frmt_kuup.innerHTML = today; 
+} 
+</script> 
+</body> 
+</html> 
