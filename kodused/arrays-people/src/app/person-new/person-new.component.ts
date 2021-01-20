@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ArrayService } from '../array.service';
 
 @Component({
   selector: 'app-person-new',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonNewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private arrayService: ArrayService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm) {
+    this.arrayService.addOne(form.value);
   }
 
 }
