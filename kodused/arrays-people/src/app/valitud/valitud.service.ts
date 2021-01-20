@@ -8,7 +8,7 @@ export class ValitudService {
 
   constructor() { }
 
-  addHuman(human: { firstName string, lastName: string, age: number, address: string}) {
+  addHuman(human: {firstName: string, lastName: string, age: number, address: string}) {
     this.chosenPeople = JSON.parse(localStorage.getItem("people")) || [];
     this.chosenPeople.push(human);
     localStorage.setItem("people", JSON.stringify(this.chosenPeople));

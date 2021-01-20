@@ -1,6 +1,6 @@
-<form routerLink="/" (ngSubmit)="onSubmit(form)" #form="ngForm">
+<form (ngSubmit)="onSubmit(inimeseLisamiseVorm)" #inimeseLisamiseVorm="ngForm">
     <label>Eesnimi</label>
-    <input ngModel name="firstName" type="text">
+    <input ngModel name="firstName" type="text" >
     <label>Perenimi</label>
     <input ngModel name="lastName" type="text">
     <label>Vanus</label>
