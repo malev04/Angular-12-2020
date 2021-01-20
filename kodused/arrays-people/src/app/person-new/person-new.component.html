@@ -1,3 +1,5 @@
+<a routerLink="/">Tagasi avalehele...</a>
+<br><br>
 <form (ngSubmit)="onSubmit(inimeseLisamiseVorm)" #inimeseLisamiseVorm="ngForm">
     <label>Eesnimi</label>
     <input ngModel name="firstName" type="text" minglength="2" required>
@@ -7,12 +9,9 @@
     <input ngModel name="age" type="number" required>
     <label>Aadress</label>
     <input ngModel name="address" type="text" required>
-    <button [disabled]="form.invalid" type="submit">Lisa inimene</button>
+    <button [disabled]="inimeseLisamiseVorm.invalid" type="submit">Lisa inimene</button>
 </form>
-<div *ngIf="form.valid">Vorm on korrektne!</div>
-<div>
-    <a routerLink="/">Tagasi avalehele...</a>
-</div>
+<div *ngIf="inimeseLisamiseVorm.valid">Vorm on korrektne!</div>
 <!-- [] property binding
 HTML atribuut läheb dünaamiliseks 
 alati peab paremal pool funktsioon / muutuja / 
