@@ -17,6 +17,7 @@ export class PersonNewComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.arrayService.addOne(form.value);
+    this.router.navigateByUrl("/")
   }
 
 }

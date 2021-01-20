@@ -3,7 +3,7 @@
 <a routerLink="/">Tagasi index lehele</a>
 <br><br>
 <button (click)="onRemoveAll()" >Tühjenda</button>
-<button routerLink()="/new" >Lisa uus inimene</button>
+<button routerLink="/new" >Lisa uus inimene</button>
 
 <div *ngFor="let human of humans; let i = index">
   {{ human.firstName }} {{ human.lastName }}
