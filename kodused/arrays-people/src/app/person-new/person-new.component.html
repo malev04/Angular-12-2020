@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <label>Eesnimi</label>
+    <input ngModel name="firstName" type="text">
+    <label>Perenimi</label>
+    <input ngModel name="lastName" type="text">
+    <label>Vanus</label>
+    <input ngModel name="age" type="number">
+    <label>Aadress</label>
+    <input ngModel name="address" type="text">
+    <button type="submit">Lisa inimene</button>
+</form>
