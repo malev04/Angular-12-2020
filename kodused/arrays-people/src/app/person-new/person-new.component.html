@@ -3,6 +3,7 @@
 <form (ngSubmit)="onSubmit(inimeseLisamiseVorm)" #inimeseLisamiseVorm="ngForm">
     <label>Eesnimi</label>
     <input ngModel name="firstName" type="text" minglength="2" required>
+    <span *ngIf="inimeseLisamiseVorm.firstName.errors">Eesnimi on nõutud!</span>
     <label>Perenimi</label>
     <input ngModel name="lastName" type="text" required>
     <label>Vanus</label>
