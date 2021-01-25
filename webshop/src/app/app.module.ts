@@ -10,6 +10,7 @@ import { ItemListComponent } from './item/item-list/item-list.component';
 import { ItemViewComponent } from './item/item-view/item-view.component';
 import { CartComponent } from './cart/cart.component';
 import { NotFoundComponent } from './global/not-found/not-found.component';
+import { UniquePipe } from './item/item-list/unique.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './global/not-found/not-found.component';
     ItemListComponent,
     ItemViewComponent,
     CartComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UniquePipe
   ],
   imports: [
     BrowserModule,
