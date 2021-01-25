@@ -16,6 +16,8 @@ export class ArrayService {
     {firstName: "Günther", lastName: "Grass", age: 41, address: "Germany" },
     {firstName: "Tiiu", lastName: "Poisipea", age: 22, address: "Estonia" },
     {firstName: "Henn", lastName: "Vesihein", age: 22, address: "Estonia" },
+    {firstName: "Liisa", lastName: "Ronimois", age: 36, address: "Estonia" },
+    {firstName: "Walter", lastName: "Richter", age: 36, address: "Germany" },
   ]
 
   constructor() { }
