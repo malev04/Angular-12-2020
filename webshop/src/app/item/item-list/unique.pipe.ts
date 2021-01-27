@@ -9,8 +9,8 @@ class PipeTransform omab vastavalt Pipe'le iseloomulikku implementatsiooni
 */
 export class UniquePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform(value: any[]): any[] {
+    return value;
+    }
 
 }

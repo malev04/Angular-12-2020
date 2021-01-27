@@ -16,18 +16,11 @@
  </div>
  <!-- Filtri vajutades väljatulev tekst -->
  <div *ngIf="dropdownOpen" class="filter-box">
-    <div class="dropdown-value">
-      <input checked type="checkbox"><div>Puuviljad</div>
-    </div>
-    <div class="dropdown-value">
-      <input checked type="checkbox"><div>Snäkid</div>
-    </div>
-    <div class="dropdown-value">
-      <input checked type="checkbox"><div>Kondiitritooted</div>
+    <div class="dropdown-value" *ngFor="let products of products | unique">
+      <input checked type="checkbox"><div>{{ product.category }}</div>
     </div>
  </div>
-
-
+<!-- Kõik esemed -->
   <div class="item-list">
     <div 
         class="item" *ngFor="let item of products; let i = index"
