@@ -1,18 +1,27 @@
 <!-- <button (click)="onAddToDatabase()">Lisa andmebaasi</button> -->
 <div id="goods-content">
-
+  
+  <!-- filter-bar element  -->
   <div class="filter-bar">
     <div class="filters">
-        <div class="filter-name" (click)="onOpenDropdown()"><img src="assets/filter-icon.svg"> Filtreeri <img src="assets/filter-arrow.svg"></div>
-        <div class="filter-name">Järjesta </div>
+        <div [class.blue]="dropdownOpen" class="filter-name" (click)="onOpenDropdown()"><img src="assets/filter-icon.svg"> Filtreeri <img src="assets/filter-arrow.svg"></div>
+        <div class="filter-name">Järjesta: </div>
         <div class="filter-values">
-            <div class="filter-value" (click)="onSortTitle()">Tähestiku järgi</div>
+            <div 
+              class="filter-value" 
+              (click)="onSortTitle()">
+              <img 
+                *ngIf="titleNumber > 0" 
+                [class.reverse]="titleNumber == 2"
+                 src="assets/order-by-arrow-down.svg"> 
+                  Tähestiku järgi
+        </div>
             <div class="filter-value" (click)="onSortPrice()">Hinna järgi</div>
             <div class="filter-value" (click)="onSortPopularity()">Kategooria järgi</div>
             <div class="filter-value" (click)="onSortDiscount()">Sooduspakkumised</div>
         </div>
       </div>    
-  <div class="filter-value" *ngIf="products">{{ products.length }} toodet</div>    
+  <div class="filter-value" *ngIf="productShown">{{ productShown.length }} toodet</div>    
  </div>
  <!-- Filtri vajutades väljatulev tekst -->
  <div *ngIf="dropdownOpen" class="filter-box">
@@ -23,7 +32,7 @@
 <!-- Kõik esemed -->
   <div class="item-list">
     <div 
-        class="item" *ngFor="let item of products; let i = index"
+        class="item" *ngFor="let item of productShown; let i = index"
         (mouseenter)="onMouseEnter(item)" 
         (mouseleave)="onMouseLeave(item)" >
       <button *ngIf="item.showButton"
@@ -42,4 +51,8 @@
       </div>
     </div>
   </div>  
+</div>
+
+<div *ngIf="!productShown || isSorting" style="text-align: center;">
+  <app-spinner></app-spinner>
 </div>

@@ -41,6 +41,18 @@
   padding: 0 10px;
 }
 
+.blue {
+  background-color: #299bdb;
+
+}
+.reverse {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 .filter-box {
   align-items: flex-start;
   background: #fff;

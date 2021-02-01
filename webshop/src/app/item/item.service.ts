@@ -21,7 +21,7 @@ products: Item[] = [];
     getOneProduct(id: string): Item {
       return this.products[id];
     }
-
+    // WebAPI - FirebaseDB
     saveProductsToDatabase() {
       this.http.put("https://webshop-12-default-rtdb.europe-west1.firebasedatabase.app/products.json", this.products).subscribe();
     }
