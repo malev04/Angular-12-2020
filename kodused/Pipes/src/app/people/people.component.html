@@ -1,5 +1,5 @@
 <div *ngFor="let p of people">
-    <div class="strong">{{p.name | shorten:2 | uppercase}}</div>
+    <div class="strong">{{p.name | shorten:10 | uppercase}}</div>
     <div>{{2021 - p.age}}</div>
     <div class="gold">{{p.countrycode | countrycode}}</div>
     <br>

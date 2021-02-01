@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeopleComponent implements OnInit {
   people = [
-    {name: "Malle", age: 1998, countrycode: 'EE'},
+    {name: "Mihkel", age: 1998, countrycode: 'EE'},
     {name: "Piret", age: 1972, countrycode: 'SE'},
-    {name: "Sergei", age: 1974, countrycode: 'RU'},
+    {name: "Victor", age: 1974, countrycode: 'RU'},
     {name: "Robert", age: 1969, countrycode: 'GB'},
-    {name: "Anna", age: 1986, countrycode: 'DE'},
+    {name: "Sarah", age: 1986, countrycode: 'DE'},
     {name: "Pekka", age: 1978, countrycode: 'FI'},
     {name: "Benny", age: 1991, countrycode: 'GB'},
     {name: "Kurt", age: 1986, countrycode: 'DE'},
