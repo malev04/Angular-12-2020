@@ -14,10 +14,24 @@
                 *ngIf="titleNumber > 0" 
                 [class.reverse]="titleNumber == 2"
                  src="assets/order-by-arrow-down.svg"> 
-                  Tähestiku järgi
-        </div>
-            <div class="filter-value" (click)="onSortPrice()">Hinna järgi</div>
-            <div class="filter-value" (click)="onSortPopularity()">Kategooria järgi</div>
+              Tähestiku järgi
+            </div>
+            <div class="filter-value" 
+              (click)="onSortPrice()">
+              <img 
+                *ngIf="titleNumber > 0" 
+                [class.reverse]="titleNumber == 2"
+                src="assets/order-by-arrow-down.svg">            
+              Hinna järgi 
+            </div>
+              <div class="filter-value" 
+              (click)="onSortPopularity()">              
+              <img 
+                *ngIf="titleNumber > 0" 
+                [class.reverse]="titleNumber == 2"
+                src="assets/order-by-arrow-down.svg">              
+              Kategooria järgi
+            </div>
             <div class="filter-value" (click)="onSortDiscount()">Sooduspakkumised</div>
         </div>
       </div>    
