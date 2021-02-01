@@ -1,0 +1,6 @@
+<div>{{ date | date:'fullDate' }}</div>
+<div>{{ date | date:'mediumDate' }}</div>
+<div>{{ 'EE' | countrycode | titlecase }}</div>
+<div class="strong" *ngFor="let number of numbers">
+    {{number | multiply:numbers.length }}
+</div>

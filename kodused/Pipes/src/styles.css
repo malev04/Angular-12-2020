@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.strong {
+    font-weight: bold;
+}
+
+.gold {
+    font-weight: bold;
+    color:gold;
+    text-transform: uppercase;
+}
