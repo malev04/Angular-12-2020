@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ItemViewComponent } from './item-view.component';
 
 describe('ItemViewComponent', () => {
@@ -7,7 +7,7 @@ describe('ItemViewComponent', () => {
   let fixture: ComponentFixture<ItemViewComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
+    TestBed.configureTestingModule({    
       declarations: [ ItemViewComponent ]
     })
     .compileComponents();

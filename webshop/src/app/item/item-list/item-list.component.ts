@@ -31,6 +31,8 @@ export class ItemListComponent implements OnInit {
     this.itemService.fetchProductsFromDatabase().subscribe(response => {
         this.productShown = response.slice();
         this.productOriginal = response.slice();
+        /* Firebase baasi tabelisse uue/uute veergude lisamine */ 
+        this.productOriginal = response.map(item=>({...item, isFavorite: false}));
         this.productsCategories = this.uniquePipe.transform(this.productShown).map(product => {
           return {category: product.category, isSelected: true}
         });
@@ -106,7 +108,12 @@ export class ItemListComponent implements OnInit {
     item.showButton = false;
   }
 
+  onFavorite(item: { isFavorite: boolean; }) {
+    item.isFavorite = !item.isFavorite;
+  }
+
   onAddToDatabase() {
-    this.itemService.saveProductsToDatabase();
+    // this.itemService.saveProductsToDatabase();
+    this.itemService.saveProductsToDatabase(this.productOriginal);
   }
 }

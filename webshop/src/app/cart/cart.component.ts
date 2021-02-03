@@ -15,12 +15,14 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     // this.cartItems = this.cartService.productsInService;
-    this.cartItems = JSON.parse(localStorage.getItem("items"));
+    // siia oli vaja lisada tühi array [] - et, testid töötaksid
+    // ja ei kurdaks forEach tühja muutuja üle.
+    this.cartItems = JSON.parse(localStorage.getItem("items")) || [];
     this.sumOfCart = this.calculateSumOfCart();
   }
 
   onDeleteItem(id: number): void {
-    this.cartItems = JSON.parse(localStorage.getItem("items"));
+    this.cartItems = JSON.parse(localStorage.getItem("items")) || [];
     this.cartItems.splice(id, 1);
     this.sumOfCart = this.calculateSumOfCart();
     localStorage.setItem("items", 
