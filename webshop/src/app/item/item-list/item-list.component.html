@@ -65,17 +65,17 @@
         </div>
         <div class="text-title">{{ item.title | uppercase }}</div>
         <div class="text-price">{{ item.price | currency: 'EUR' }} </div>
-      </div>
-    </div>
+      </div>    
     <img 
-      *ngif="item.isFavorite"
+      *ngIf="item.isFavorite"
       (click)="onFavorite(item)"
       style="width: 30px; height:30px;" 
-      src=".\assets\heart-filled.svg">
+      src="assets/heart-filled.svg">
      <img 
-      *ngif="!item.isFavorite"
+      *ngIf="!item.isFavorite"
       (click)="onFavorite(item)"
       style="width: 30px; height:30px;" 
-      src=".\assets\heart.svg">      
+      src="assets/heart.svg">      
   </div>  
+ </div>
 </div>

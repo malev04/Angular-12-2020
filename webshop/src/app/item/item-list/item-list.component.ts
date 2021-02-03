@@ -31,8 +31,11 @@ export class ItemListComponent implements OnInit {
     this.itemService.fetchProductsFromDatabase().subscribe(response => {
         this.productShown = response.slice();
         this.productOriginal = response.slice();
-        /* Firebase baasi tabelisse uue/uute veergude lisamine */ 
+        /* Firebase baasi tabelisse uue/uute veergude lisamine 
+        lisame Firebase baasi tabelisse uue veeru isFavorite
         this.productOriginal = response.map(item=>({...item, isFavorite: false}));
+        */ 
+        this.productOriginal = response.map(item=>({...item, popularity: Math.floor(Math.random() * 10)}));
         this.productsCategories = this.uniquePipe.transform(this.productShown).map(product => {
           return {category: product.category, isSelected: true}
         });
@@ -64,7 +67,6 @@ export class ItemListComponent implements OnInit {
     }     
   }
   
-
   onSortPopularity() {
   }
 

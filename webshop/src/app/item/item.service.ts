@@ -22,9 +22,15 @@ private products = [ { title: "Tere või (1) 82%", category: "Piimatooted", pric
       return this.products[id];
     }
     // WebAPI - FirebaseDB
-    saveProductsToDatabase(products: Item[]) {
+    /*saveProductsToDatabase(products: Item[]) {
       this.http.put("https://webshop-12-default-rtdb.europe-west1.firebasedatabase.app/products.json", this.products).subscribe();
+    }*/
+    // meetod kui on soov data Firebase pilve-baasi saata :
+    
+    saveProductsToDatabase(items: Item[]) {
+      this.http.put("https://webshop-12-default-rtdb.europe-west1.firebasedatabase.app/products.json", items).subscribe();
     }
+    /* */
 
     fetchProductsFromDatabase() {
       return this.http
