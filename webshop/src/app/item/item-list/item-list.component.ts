@@ -33,10 +33,10 @@ export class ItemListComponent implements OnInit, OnDestroy {
         this.productsShown = response.slice();
         this.productsOriginal = response.slice();
         /* Firebase baasi tabelisse uue/uute veergude lisamine 
-        lisame Firebase baasi tabelisse uue veeru isFavorite
+            - lisame Firebase baasi tabelisse uue veeru isFavorite
         this.productOriginal = response.map(item=>({...item, isFavorite: false}));
         */ 
-        /* lisame ka popularity veeru andmete jaoks 1 - 10 
+        /*  - lisame ka popularity veeru andmete jaoks (nr 1..10)
         2 varianti: 
         this.productOriginal = response.map(item=>({...item, popularity: Math.floor(Math.random() * 10)}));
         this.productOriginal = response.map(item=>({...item, popularity: Math.floor(Math.random() * (10 - 1 + 1)) + 1}));

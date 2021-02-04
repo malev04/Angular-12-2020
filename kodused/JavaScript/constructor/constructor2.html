@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JavaScript constructor class</title>
+</head>
+<body>      
+<script type = "text/javascript">
+class User {
+    constructor(name) {
+    this.name = name;
+    console.log("Nimi: "+this.name);
+    }
+
+    ytleTere() {
+    alert(this.name);
+    }
+}
+    let user = new User("Mihkel");
+    console.log("Nimi: "+user);
+    user.ytleTere();
+</script>      
+</body>
+
+</html>

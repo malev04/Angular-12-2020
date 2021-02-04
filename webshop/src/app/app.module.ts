@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,8 +25,7 @@ import { SpinnerComponent } from './global/spinner/spinner.component';
     NotFoundComponent,
     UniquePipe,
     FilterPipe,
-    SpinnerComponent
-    
+    SpinnerComponent    
   ],
   imports: [
     BrowserModule,
@@ -34,6 +33,7 @@ import { SpinnerComponent } from './global/spinner/spinner.component';
     HttpClientModule,
   ],
   providers: [UniquePipe, FilterPipe, HttpClientModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
